@@ -36,32 +36,29 @@ public class Main extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void onPlayerChat(AsyncPlayerChatEvent e) {
-		
+		String newMessage = e.getMessage();
 		// <3 -> ♥ check
 		if(e.getMessage().contains("<3")) {
-			String newMessage = e.getMessage().replaceAll("<3", ChatColor.RED + "♥" + ChatColor.RESET);
-			e.setMessage(newMessage);
+			 newMessage = newMessage.replaceAll("<3", ChatColor.RED + "♥" + ChatColor.RESET);
 		}
 		
 		//:shrug: ->  ¯\_(ツ)_/¯ check
 		if(e.getMessage().contains(":shrug:")) {
-			String newMessage = e.getMessage().replaceAll(":shrug:", "¯\\_(ツ)_/¯");
-			e.setMessage(newMessage);
+			 newMessage = newMessage.replaceAll(":shrug:", "¯\\_(ツ)_/¯");
 		}
 		
 		// :) -> 🙂 check
 		if(e.getMessage().contains(":)")) {
-			String newMessage = e.getMessage().replaceAll(":)", "🙂");
-			e.setMessage(newMessage);
+			 newMessage = newMessage.replaceAll(":)", "🙂");
 		}
 		
 		//:( -> 🙁 check
 		
 		if(e.getMessage().contains(":(")) {
-			String newMessage = e.getMessage().replaceAll(":(", "🙁");
-			e.setMessage(newMessage);
+			 newMessage = newMessage.replaceAll(":(", "🙁");
 		}
 		
+		e.setMessage(newMessage);
 		
 		
 	}
