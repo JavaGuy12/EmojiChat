@@ -1,0 +1,8 @@
+name: EmojiChat
+version: 1.0.0
+main: me.ITGuy12.emojichat.Main
+description: Spice up your chat with emojis.
+commands:
+  emojis:
+    aliases: [emoji]
+    description: List all of the usable emojis.
